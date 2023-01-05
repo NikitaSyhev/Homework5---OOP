@@ -24,7 +24,7 @@ int main() {
 	
 	std::cout << "Результат работы оператора '==': " << (person == person1) << std::endl;
 
-	std::cout << "Результат работы оператора '!': " << !person << std::endl;
+	std::cout << "Результат работы оператора '!=': " << (person != person1) << std::endl;
 	std::string test;
 	test = person += person1;
 

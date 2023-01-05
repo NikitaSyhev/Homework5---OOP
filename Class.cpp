@@ -20,14 +20,14 @@ void Class::setName(std::string name) {
 const Class& Class::operator+( Class& other) // перегрузка оператора +
 {
     std::string str;
-    str = _name + other.getName();
+    str = this->_name + other.getName();
     return str;
 }
 
 const std::string& Class::operator-(Class& other) // перегрузка оператора -
 {
     std::string str = other.getName();;
-    return _name.substr(_name.size() - str.size());
+    return this->_name.substr(this->_name.size() - str.size());
 }
 
 /*const Class& Class::operator-(Class& other) // перегрузка оператора -, не реализовал
@@ -38,7 +38,7 @@ const std::string& Class::operator-(Class& other) // перегрузка оператора -
 int Class::operator*(int num) // оператор * 
 {
     int res;
-    res = _name.size() * num;
+    res = this->_name.size() * num;
     return res;
 }
 
@@ -55,13 +55,13 @@ bool Class::operator!=(Class& other)
 
 std::string Class::operator+=(Class& other) { // перегрузка оператора +=
     std::string str;
-    str = _name += other.getName();
+    str = this->_name += other.getName();
     return str;
 }
 
 
 int Class::operator/(int number) {
-    int res = _name.size() / number;
+    int res = this->_name.size() / number;
     return res;
 }
 
