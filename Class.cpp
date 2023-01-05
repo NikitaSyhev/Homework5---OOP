@@ -43,12 +43,12 @@ int Class::operator*(int num) // оператор *
 }
 
 bool Class::operator==(Class& other) {
-    return _name == other.getName();
+    return this->_name == other.getName();
 }
 
-bool Class::operator!()
-{if (_name == " ")
-    return false;
+bool Class::operator!=(Class& other)
+{
+    return!(this->_name == other.getName());
 }
 
 

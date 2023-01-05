@@ -21,7 +21,7 @@ class Class
 
 	bool operator==(Class& other);
 
-	bool operator!();  
+	bool operator!=(Class& other);
 	
 	std::string operator+=(Class& other);
 
